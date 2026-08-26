@@ -1,13 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Polina Stukalova — Photographer</title>
 
-<meta name="description" content="Polina Stukalova — photographer based in France. Portrait, landscape, architecture, street, animal and travel photography.">
+<meta
+  name="description"
+  content="Polina Stukalova — photographer based in Saint Petersburg."
+>
 
 <style>
 
@@ -81,7 +84,6 @@ nav a:hover {
 /* ================= HERO ================= */
 
 .hero {
-
   min-height: 100vh;
 
   display: flex;
@@ -95,13 +97,11 @@ nav a:hover {
   color: #fffaf4;
 
   background:
-
     linear-gradient(
       rgba(45, 34, 25, .35),
       rgba(45, 34, 25, .35)
     ),
-
-    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90")
+    url("images/hero.jpg")
     center / cover no-repeat;
 }
 
@@ -110,52 +110,35 @@ nav a:hover {
 }
 
 .eyebrow {
-
   font-family: Arial, sans-serif;
-
   font-size: 10px;
-
   letter-spacing: 5px;
-
   text-transform: uppercase;
-
   margin-bottom: 25px;
 }
 
 .hero h1 {
-
   font-size: clamp(60px, 11vw, 135px);
-
   font-weight: normal;
-
   line-height: .9;
-
   margin-bottom: 30px;
 }
 
 .hero p {
-
   font-size: 18px;
-
   font-style: italic;
 }
 
 .scroll {
-
   display: inline-block;
-
   margin-top: 55px;
 
   font-family: Arial, sans-serif;
-
   font-size: 9px;
-
   letter-spacing: 3px;
-
   text-transform: uppercase;
 
   border-bottom: 1px solid rgba(255,255,255,.7);
-
   padding-bottom: 7px;
 }
 
@@ -163,35 +146,24 @@ nav a:hover {
 /* ================= INTRO ================= */
 
 .intro {
-
   max-width: 900px;
-
   margin: auto;
-
   padding: 140px 30px;
-
   text-align: center;
 }
 
 .intro h2 {
-
   font-size: clamp(38px, 6vw, 65px);
-
   font-weight: normal;
-
   line-height: 1.05;
-
   margin-bottom: 30px;
 }
 
 .intro p {
-
   max-width: 650px;
-
   margin: auto;
 
   font-size: 18px;
-
   color: #66594e;
 }
 
@@ -199,38 +171,28 @@ nav a:hover {
 /* ================= PORTFOLIO ================= */
 
 .portfolio {
-
   padding: 40px 5% 140px;
 }
 
 .section-title {
-
   text-align: center;
-
   margin-bottom: 65px;
 }
 
 .section-title span {
-
   display: block;
 
   font-family: Arial, sans-serif;
-
   font-size: 9px;
-
   letter-spacing: 4px;
-
   text-transform: uppercase;
 
   margin-bottom: 15px;
-
   color: #8a796a;
 }
 
 .section-title h2 {
-
   font-size: clamp(40px, 6vw, 70px);
-
   font-weight: normal;
 }
 
@@ -238,20 +200,15 @@ nav a:hover {
 /* ================= CATEGORIES ================= */
 
 .categories {
-
   max-width: 1300px;
-
   margin: auto;
 
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 22px;
 }
 
 .category {
-
   position: relative;
 
   height: 600px;
@@ -259,7 +216,6 @@ nav a:hover {
   overflow: hidden;
 
   display: flex;
-
   align-items: flex-end;
 
   padding: 35px;
@@ -267,23 +223,19 @@ nav a:hover {
   color: white;
 
   background-size: cover;
-
   background-position: center;
 
   transition: transform .5s ease;
 }
 
 .category:hover {
-
   transform: scale(.985);
 }
 
 .category::after {
-
   content: "";
 
   position: absolute;
-
   inset: 0;
 
   background:
@@ -294,29 +246,21 @@ nav a:hover {
 }
 
 .category-content {
-
   position: relative;
-
   z-index: 2;
 }
 
 .category h3 {
-
   font-size: 48px;
-
   font-weight: normal;
-
   margin-bottom: 4px;
 }
 
 .category p {
-
   font-family: Arial, sans-serif;
 
   font-size: 9px;
-
   letter-spacing: 3px;
-
   text-transform: uppercase;
 }
 
@@ -324,102 +268,100 @@ nav a:hover {
 /* ================= CATEGORY PHOTOS ================= */
 
 .portrait {
-
-  background-image:
-
-  url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1400&q=90");
+  background-image: url("images/portrait/portrait-1.jpg");
 }
 
 .landscape {
-
-  background-image:
-
-  url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=90");
+  background-image: url("images/landscape/landscape-1.jpg");
 }
 
 .architecture {
-
-  background-image:
-
-  url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=90");
+  background-image: url("images/architecture/architecture-1.jpg");
 }
 
 .street {
-
-  background-image:
-
-  url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1400&q=90");
+  background-image: url("images/street/street-1.jpg");
 }
 
 .animal {
-
-  background-image:
-
-  url("https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1400&q=90");
+  background-image: url("images/animal/animal-1.jpg");
 }
 
 .travel {
-
-  background-image:
-
-  url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=90");
+  background-image: url("images/travel/travel-1.jpg");
 }
 
 
-<!-- ================= ABOUT ================= -->
+/* ================= ABOUT ================= */
 
-<section class="about" id="about">
+.about {
+  max-width: 1300px;
 
-  <div class="about-text">
+  margin: auto;
 
-    <span>
-      About me
-    </span>
+  padding: 80px 5% 160px;
 
-    <h2>
-      Hello,<br>
-      I'm Polina.
-    </h2>
+  display: grid;
 
-    <p>
-      My name is Polina Stukalova, and I am a photographer
-      interested in people, places and the atmosphere
-      of everyday life.
-    </p>
+  grid-template-columns: 1fr 1fr;
 
-    <p>
-      I am drawn to natural light, quiet moments,
-      interesting faces, architecture, landscapes
-      and the small details that often go unnoticed.
-    </p>
+  gap: 80px;
 
-    <p>
-      Through photography, I try to capture not only
-      what a place or person looks like, but also
-      what it feels like to be there.
-    </p>
+  align-items: center;
+}
 
-    <p>
-      Based in France, available for photography
-      projects and collaborations across Europe.
-    </p>
+.about-photo {
+  min-height: 650px;
 
-  </div>
+  background-image: url("images/about.jpg");
 
-</section>
+  background-size: cover;
+  background-position: center;
+}
+
+.about-text span {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #8a796a;
+
+  margin-bottom: 20px;
+}
+
+.about-text h2 {
+  font-size: clamp(50px, 7vw, 85px);
+
+  font-weight: normal;
+
+  line-height: .95;
+
+  margin-bottom: 35px;
+}
+
+.about-text p {
+  max-width: 520px;
+
+  font-size: 17px;
+
+  color: #66594e;
+
+  margin-bottom: 20px;
+}
 
 
 /* ================= CONTACT ================= */
 
 .contact {
-
   text-align: center;
-
   padding: 160px 30px;
 }
 
 .contact h2 {
-
   font-size: clamp(45px, 8vw, 95px);
 
   font-weight: normal;
@@ -430,7 +372,6 @@ nav a:hover {
 }
 
 .contact p {
-
   color: #76685d;
 
   font-size: 17px;
@@ -439,7 +380,6 @@ nav a:hover {
 }
 
 .button {
-
   display: inline-block;
 
   border: 1px solid #55483e;
@@ -458,9 +398,7 @@ nav a:hover {
 }
 
 .button:hover {
-
   background: #55483e;
-
   color: #eee7dd;
 }
 
@@ -468,7 +406,6 @@ nav a:hover {
 /* ================= FOOTER ================= */
 
 footer {
-
   padding: 30px 5%;
 
   border-top: 1px solid #d2c5b7;
@@ -494,46 +431,36 @@ footer {
 @media (max-width: 700px) {
 
   header {
-
     padding: 18px 20px;
   }
 
   .logo {
-
     font-size: 13px;
-
     letter-spacing: 2px;
   }
 
   nav {
-
     gap: 12px;
-
     font-size: 7px;
   }
 
   .hero {
-
     min-height: 90vh;
   }
 
   .categories {
-
     grid-template-columns: 1fr;
   }
 
   .category {
-
     height: 480px;
   }
 
   .category h3 {
-
     font-size: 38px;
   }
 
   .about {
-
     grid-template-columns: 1fr;
 
     gap: 50px;
@@ -542,12 +469,10 @@ footer {
   }
 
   .about-photo {
-
     min-height: 500px;
   }
 
   footer {
-
     flex-direction: column;
 
     gap: 10px;
@@ -558,6 +483,7 @@ footer {
 }
 
 </style>
+
 </head>
 
 
@@ -568,7 +494,7 @@ footer {
 
 <header>
 
-  <a href="#" class="logo">
+  <a href="index.html" class="logo">
     Polina Stukalova
   </a>
 
@@ -598,7 +524,7 @@ footer {
   <div class="hero-content">
 
     <div class="eyebrow">
-      Photographer · France · Europe
+      Photographer · Saint Petersburg · Russia
     </div>
 
     <h1>
@@ -657,7 +583,7 @@ footer {
   <div class="categories">
 
 
-    <a href="#" class="category portrait">
+    <a href="portrait.html" class="category portrait">
 
       <div class="category-content">
 
@@ -666,7 +592,7 @@ footer {
         </h3>
 
         <p>
-          People · Personality · Light
+          Emotion · Moment · Light
         </p>
 
       </div>
@@ -674,7 +600,7 @@ footer {
     </a>
 
 
-    <a href="#" class="category landscape">
+    <a href="landscape.html" class="category landscape">
 
       <div class="category-content">
 
@@ -683,7 +609,7 @@ footer {
         </h3>
 
         <p>
-          Nature · Light · Space
+          Atmosphere · Nature · Space
         </p>
 
       </div>
@@ -691,7 +617,7 @@ footer {
     </a>
 
 
-    <a href="#" class="category architecture">
+    <a href="architecture.html" class="category architecture">
 
       <div class="category-content">
 
@@ -700,7 +626,7 @@ footer {
         </h3>
 
         <p>
-          Form · Geometry · Space
+          Form · Geometry · Perspective
         </p>
 
       </div>
@@ -708,7 +634,7 @@ footer {
     </a>
 
 
-    <a href="#" class="category street">
+    <a href="street.html" class="category street">
 
       <div class="category-content">
 
@@ -725,7 +651,7 @@ footer {
     </a>
 
 
-    <a href="#" class="category animal">
+    <a href="animal.html" class="category animal">
 
       <div class="category-content">
 
@@ -734,7 +660,7 @@ footer {
         </h3>
 
         <p>
-          Wildlife · Character · Life
+          Character · Emotion · Life
         </p>
 
       </div>
@@ -742,7 +668,7 @@ footer {
     </a>
 
 
-    <a href="#" class="category travel">
+    <a href="travel.html" class="category travel">
 
       <div class="category-content">
 
@@ -784,18 +710,7 @@ footer {
     </h2>
 
     <p>
-      I believe photography is about more
-      than beautiful images.
-    </p>
-
-    <p>
-      It is about atmosphere, emotion,
-      light and the small details that
-      make a moment unforgettable.
-    </p>
-
-    <p>
-      Based in France, available across Europe.
+      <!-- Your text will be added here later. -->
     </p>
 
   </div>
