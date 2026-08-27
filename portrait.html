@@ -110,17 +110,15 @@ header {
 
 .gallery {
 
-  max-width: 1300px;
+  max-width: 1400px;
 
   margin: auto;
 
   padding: 0 5% 140px;
 
-  display: grid;
+  columns: 2 500px;
 
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 25px;
+  column-gap: 25px;
 }
 
 .gallery img {
@@ -131,13 +129,94 @@ header {
 
   display: block;
 
+  margin-bottom: 25px;
+
   cursor: pointer;
 
-  transition: opacity .4s ease;
+  transition:
+    opacity .4s ease,
+    transform .4s ease;
+
+  break-inside: avoid;
 }
 
 .gallery img:hover {
+  opacity: .85;
+  transform: scale(.995);
+}
+
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  background: rgba(30, 24, 20, .94);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity .35s ease,
+    visibility .35s ease;
+}
+
+.lightbox.active {
+
+  opacity: 1;
+
+  visibility: visible;
+}
+
+.lightbox img {
+
+  max-width: 92vw;
+
+  max-height: 90vh;
+
+  object-fit: contain;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+.lightbox-close {
+
+  position: absolute;
+
+  top: 25px;
+  right: 35px;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 30px;
+
+  font-weight: 200;
+
+  cursor: pointer;
+
   opacity: .8;
+
+  transition: opacity .3s ease;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
 }
 
 
@@ -169,19 +248,44 @@ footer {
 
 @media (max-width: 700px) {
 
+  header {
+    padding: 20px;
+  }
+
   .logo {
     font-size: 13px;
   }
 
-  .gallery {
-    grid-template-columns: 1fr;
+  .back {
+    font-size: 8px;
+  }
 
+  .gallery-header {
+    padding: 90px 20px 60px;
+  }
+
+  .gallery {
+    columns: 1;
     padding-left: 7%;
     padding-right: 7%;
   }
 
-  .gallery-header {
-    padding-top: 90px;
+  .gallery img {
+    margin-bottom: 18px;
+  }
+
+  .lightbox {
+    padding: 20px;
+  }
+
+  .lightbox img {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 20px;
   }
 
   footer {
@@ -202,6 +306,8 @@ footer {
 <body>
 
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
   <a href="index.html" class="logo">
@@ -214,6 +320,8 @@ footer {
 
 </header>
 
+
+<!-- ================= TITLE ================= -->
 
 <section class="gallery-header">
 
@@ -232,18 +340,89 @@ footer {
 </section>
 
 
+<!-- ================= GALLERY ================= -->
+
 <section class="gallery">
 
-  <img src="images/portrait/portrait-1.jpg" alt="Portrait photography">
 
-  <img src="images/portrait/portrait-2.jpg" alt="Portrait photography">
+  <!-- Add your photographs here -->
 
-  <img src="images/portrait/portrait-3.jpg" alt="Portrait photography">
+  <img
+    src="images/portrait/portrait-1.jpg"
+    alt="Portrait photography"
+  >
 
-  <img src="images/portrait/portrait-4.jpg" alt="Portrait photography">
+  <img
+    src="images/portrait/portrait-2.jpg"
+    alt="Portrait photography"
+  >
+
+  <img
+    src="images/portrait/portrait-3.jpg"
+    alt="Portrait photography"
+  >
+
+  <img
+    src="images/portrait/portrait-4.jpg"
+    alt="Portrait photography"
+  >
+
+  <img
+    src="images/portrait/portrait-5.jpg"
+    alt="Portrait photography"
+  >
+
+  <img
+    src="images/portrait/portrait-6.jpg"
+    alt="Portrait photography"
+  >
+
+  <img
+    src="images/portrait/portrait-7.jpg"
+    alt="Portrait photography"
+  >
+
+  <img
+    src="images/portrait/portrait-8.jpg"
+    alt="Portrait photography"
+  >
+
+  <img
+    src="images/portrait/portrait-9.jpg"
+    alt="Portrait photography"
+  >
+
+  <img
+    src="images/portrait/portrait-10.jpg"
+    alt="Portrait photography"
+  >
+
+  <!--
+  Continue if you have more photos:
+
+  <img src="images/portrait/portrait-11.jpg" alt="Portrait photography">
+  <img src="images/portrait/portrait-12.jpg" alt="Portrait photography">
+  <img src="images/portrait/portrait-13.jpg" alt="Portrait photography">
+  -->
+
 
 </section>
 
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div class="lightbox" id="lightbox">
+
+  <div class="lightbox-close" id="lightboxClose">
+    ×
+  </div>
+
+  <img id="lightboxImage" src="" alt="">
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -256,6 +435,65 @@ footer {
   </span>
 
 </footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+const galleryImages = document.querySelectorAll(".gallery img");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImage = document.getElementById("lightboxImage");
+
+const lightboxClose = document.getElementById("lightboxClose");
+
+
+galleryImages.forEach(function(image) {
+
+  image.addEventListener("click", function() {
+
+    lightboxImage.src = image.src;
+
+    lightboxImage.alt = image.alt;
+
+    lightbox.classList.add("active");
+
+  });
+
+});
+
+
+lightboxClose.addEventListener("click", function() {
+
+  lightbox.classList.remove("active");
+
+});
+
+
+lightbox.addEventListener("click", function(event) {
+
+  if (event.target === lightbox) {
+
+    lightbox.classList.remove("active");
+
+  }
+
+});
+
+
+document.addEventListener("keydown", function(event) {
+
+  if (event.key === "Escape") {
+
+    lightbox.classList.remove("active");
+
+  }
+
+});
+
+</script>
 
 
 </body>
